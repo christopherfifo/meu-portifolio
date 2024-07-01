@@ -1,0 +1,237 @@
+:root{
+    --sol : #F39c12;
+    --lua : #87CEEB;
+    --corpo : #ffffff;
+    --funfo : #000000;
+    --fundo_fundo : #181717;
+}	
+
+html{
+    scroll-behavior: smooth;
+    background-color: cornflowerblue;
+}
+
+*{
+    font-family: "Playfair Display", serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                /* elementos da cabeça */
+
+header{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    padding: 40px 4%;
+    width: 100%;
+    transition: 1s;
+}
+
+header.rolagem{
+    background-color: purple;
+    padding: 20px 4%;
+}
+                                        /* quando rolar o scroll muda de cor*/
+header.rolagem a{
+    color: white;
+}        
+
+header.rolagem .fa-moon{
+    color:var(--lua);
+}    
+
+header.rolagem .fa-sun{
+    color:var(--sol);
+}   
+                                       /**/
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header ul{
+    list-style: none;
+}
+
+header ul li{
+    margin: 0 40px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+header ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header button{
+    color: var(--corpo);
+    cursor: pointer;
+}
+header button:hover{
+    text-decoration: underline;
+}
+
+header button p{
+    color: var(--funfo);
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+                                                /*  opacidade dos elementos do nav */
+
+.trans:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out; /*efeito de transição de todos os elementos*/
+}
+
+.lista:hover > :not(:hover){ /*seleciona todos os elementos que não estão sendo hover*/
+    opacity: 0.3;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+                                                /* icone do sol e lua     */
+
+#mode_icon{
+    cursor: pointer;
+    font-size: 20px;
+    transform: scale(1.20);
+}
+.fa-sun{
+    color: var(--corpo);
+}
+
+.fa-moon{
+    color: var(--corpo);
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/	
+
+
+                                                /* parte do banner */
+.banner{
+    height: 100vh;
+    background-image: url(../imagens/O1GnXT.gif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 1%;
+    overflow: hidden;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+                                        /*sobre mim*/
+
+.studi{
+background-color:var(--fundo_fundo) ;
+width: 90%;
+height: 170vh;
+gap: 30px;
+border-radius: 5%;
+}
+
+.studi h1{
+    color: var(--corpo);
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.display{
+    max-width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 0px 20px 0px 20px;
+}
+
+.texto{
+    width: 50%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 4%;
+    background-color: var(--funfo);
+}
+
+.texto p{
+    margin: 10px 0;
+    color: var(--corpo);
+}
+
+iframe{
+    width: 50%;
+    overflow: hidden;
+    border-radius: 3%;
+    height: 100%;
+}
+
+/* Estilo para a tabela de disciplinas */
+.tabela-disciplinas {
+    width: 100%; /* Largura total */
+    border-collapse: collapse; /* Colapsa as bordas para um único traço */
+    color: white; /* Cor do texto */
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+
+.tabela-disciplinas, .tabela-disciplinas th, .tabela-disciplinas td {
+    border: 1px solid #333; /* Bordas na cor cinza escuro */
+}
+
+.tabela-disciplinas th, .tabela-disciplinas td {
+    text-align: left; /* Alinhamento de texto à esquerda */
+    padding: 8px; /* Espaçamento interno */
+}
+
+/* Cores alternadas para as linhas */
+.tabela-disciplinas tr:nth-child(even) {
+    background-color: #333; /* Cor de fundo para linhas pares */
+}
+
+.tabela-disciplinas tr:nth-child(odd) {
+    background-color: #444; /* Cor de fundo para linhas ímpares */
+}
+
+.tabela-disciplinas th {
+    background-color: #222; /* Cor de fundo para o cabeçalho */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+                                                /* final da pagina */
+
+.final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    font-size: 30px;
+}
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
