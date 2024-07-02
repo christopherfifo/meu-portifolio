@@ -1,14 +1,23 @@
 :root{
     --sol : #F39c12;
     --lua : #87CEEB;
-    --corpo : #ffffff;
-    --funfo : #000000;
-    --fundo_fundo : #181717;
+
+    --light_corpo : #ffffff;
+    --light_menu : #1300be;
+    --light_sobre : #1d99d3;
+
+    --dark_corpo : #000000;
+    --dark_sobre : #181717;
+    --dark_menu : #881b92;
+
+    --end : #333;
 }	
 
 html{
     scroll-behavior: smooth;
-    background-color: cornflowerblue;
+    background-color: var(--light_corpo);
+    height: 100%;
+    width: 100%;
 }
 
 *{
@@ -19,7 +28,8 @@ html{
 }
 
 main{
-    display: flex;
+    display: flex ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -29,19 +39,21 @@ main{
 header{
     position: fixed ;
     top: 0;
-    left: 0;
+    left: 10%;
     padding: 40px 4%;
-    width: 100%;
     transition: 1s;
+    width: 80%;
+    border-radius: 32px;
 }
 
 header.rolagem{
-    background-color: purple;
+    background-color: var(--dark_menu);
     padding: 20px 4%;
+    top: 15px;
 }
                                         /* quando rolar o scroll muda de cor*/
 header.rolagem a{
-    color: white;
+    color: var(--light_corpo);
 }        
 
 header.rolagem .fa-moon{
@@ -54,7 +66,7 @@ header.rolagem .fa-sun{
                                        /**/
 
 .container{
-    max-width: 1280px;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -76,23 +88,13 @@ header ul li{
 }
 
 header ul li a{
-    color: white;
+    color: var(--light_corpo);
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
 
-header button{
-    color: var(--corpo);
-    cursor: pointer;
-}
-header button:hover{
-    text-decoration: underline;
-}
 
-header button p{
-    color: var(--funfo);
-}
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -118,11 +120,11 @@ header button p{
     transform: scale(1.20);
 }
 .fa-sun{
-    color: var(--corpo);
+    color: var(--light_corpo);
 }
 
 .fa-moon{
-    color: var(--corpo);
+    color: var(--light_corpo);
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/	
 
@@ -133,7 +135,7 @@ header button p{
     background-image: url(../imagens/O1GnXT.gif);
     background-position: center;
     background-size: cover;
-    border-radius: 1%;
+    border-radius: 0 0 2% 2%;
     overflow: hidden;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -141,7 +143,7 @@ header button p{
                                         /*sobre mim*/
 
 .studi{
-background-color:var(--fundo_fundo) ;
+background-color:var(--dark_sobre) ;
 width: 90%;
 height: 170vh;
 gap: 30px;
@@ -149,10 +151,12 @@ border-radius: 5%;
 }
 
 .studi h1{
-    color: var(--corpo);
+    color: var(--light_corpo);
     text-align: center;
     padding: 20px;
     gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .display{
@@ -169,12 +173,12 @@ border-radius: 5%;
     padding: 20px;
     font-size: 20px;
     border-radius: 4%;
-    background-color: var(--funfo);
+    background-color: var(--dark_corpo);
 }
 
 .texto p{
     margin: 10px 0;
-    color: var(--corpo);
+    color: var(--light_corpo);
 }
 
 iframe{
@@ -186,16 +190,18 @@ iframe{
 
 /* Estilo para a tabela de disciplinas */
 .tabela-disciplinas {
-    width: 100%; /* Largura total */
+    width: 90%; /* Largura total */
     border-collapse: collapse; /* Colapsa as bordas para um único traço */
-    color: white; /* Cor do texto */
+    border-radius: 38px;
+    color: var(--light_corpo); /* Cor do texto */
     margin-top: 20px ;
     margin-bottom: 20px ;
+    right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
 }
 
-.tabela-disciplinas, .tabela-disciplinas th, .tabela-disciplinas td {
-    border: 1px solid #333; /* Bordas na cor cinza escuro */
-}
 
 .tabela-disciplinas th, .tabela-disciplinas td {
     text-align: left; /* Alinhamento de texto à esquerda */
@@ -204,7 +210,7 @@ iframe{
 
 /* Cores alternadas para as linhas */
 .tabela-disciplinas tr:nth-child(even) {
-    background-color: #333; /* Cor de fundo para linhas pares */
+    background-color: var(--end); /* Cor de fundo para linhas pares */
 }
 
 .tabela-disciplinas tr:nth-child(odd) {
@@ -219,19 +225,96 @@ iframe{
                                                 /* final da pagina */
 
 .final{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #333;
-    color: white;
-    font-size: 30px;
-}
-footer{
-    background-color: #333;
-    color: white;
     padding: 10px 0;
     text-align: center;
 }
 
+
+    
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 30px;
+    background-color: var(--end);
+    color: var(--light_corpo);
+}
+
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.habili{
+    background-color: var(--dark_sobre);
+    padding: 20px;
+    border-radius: 5%;
+    margin: 20px;
+    width: 90%;
+height: 170vh;
+}
+
+.habili h1{
+    color: var(--light_corpo);
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.my{
+    background-color: var(--dark_sobre);
+    padding: 20px;
+    border-radius: 5%;
+    margin: 20px;
+    width: 90%;
+height: 170vh;
+}
+
+.my h1{
+    color: var(--light_corpo);
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.entregas{
+    background-color: var(--dark_sobre);
+    padding: 20px;
+    border-radius: 5%;
+    margin: 20px;
+    width: 90%;
+    height: 170vh;
+}
+
+.entregas h1{
+    color: var(--light_corpo);
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.projetos{
+    background-color: var(--dark_sobre);
+    padding: 20px;
+    border-radius: 5%;
+    margin: 20px;
+    width: 90%;
+    height: 170vh;
+}
+
+.projetos h1{
+    color: var(--light_corpo);
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.dark{
+    background-color: var(--dark_corpo);
+}

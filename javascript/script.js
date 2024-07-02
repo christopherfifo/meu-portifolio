@@ -11,6 +11,7 @@
 const video = document.querySelector("#video");
 const mode = document.getElementById("mode_icon");
 const array_modo = document.querySelectorAll(".tema");
+const html = document.querySelector("html");
 
 mode.addEventListener("click", () => {
   
@@ -19,6 +20,8 @@ mode.addEventListener("click", () => {
 
     mode.classList.toggle("fa-moon");
     mode.classList.toggle("fa-sun");
+
+    html.classList.toggle("dark");
 
     video.setAttribute(
       "src", "https://www.youtube.com/embed/4xDzrJKXOOY?autoplay=1&si=N7EwsVwPv_3rkGUw");
@@ -30,6 +33,8 @@ mode.addEventListener("click", () => {
 
   mode.classList.toggle("fa-moon");
   mode.classList.toggle("fa-sun");
+
+  html.classList.toggle("dark");
 
   video.setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&si=Wmw2lqvlOxuWPs5S");
 });
