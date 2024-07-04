@@ -135,7 +135,6 @@ ul li.item-menu a .icon > i {
 .principal {
     width: calc(100% - 81px);
     height: 1600vh;
-    margin-left: 81px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,6 +144,9 @@ ul li.item-menu a .icon > i {
 article {
     width: 900px;
     height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -152,7 +154,6 @@ header {
     top: 0;
     transition: 1s;
     width: 69%;
-    left: 21.3%;
     border-radius: 32px;
     height: 70px;
     z-index: 0;
