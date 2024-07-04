@@ -1,68 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./javascript/scritpt.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./javascript/script.js" defer></script>
-    <title>Portifolio christopher</title>
-  </head>
+      referrerpolicy="no-referrer"/>
 
-  <body class="tema">
-    <header id="header">
-      <div class="container">
-        <div class="flex">
-          <i id="mode_icon" class="fa-solid fa-moon"></i>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"/>
 
+    <title>Document</title>
+</head>
+<body id="tema">
+    
 
-<div class="body"></div>
+    <div class="contenacao">
 
-
-
-          <nav>
-            <ul class="lista">
-              <li><a href="#top" class="trans">sobre mim</a></li>
-              <li><a href="#sob" class="trans">habilidades</a></li>
-              <li><a href="#estud" class="trans">Meus estudos</a></li>
-              <li><a href="#cont" class="trans">Entregas</a></li>
-              <li><a href="#proj" class="trans">Projetos</a></li>
-            </ul>
-          </nav>
+        <nav class="menu-lateral" id="tema">
+        
+        <div class="btn-expandir"><i class="fa-solid fa-user" id="btn-exp"></i></div>
+        
+        <ul>
+        
+        
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-brands fa-github"></i></span>
+                    <span class="txt-link">Github</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                    <span class="txt-link">instagram</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                    <span class="txt-link">Linkedin</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <span class="txt-link">Email</span>
+                </a>
+            </li>
+        
+        </ul>
+        
+        <i id="mode_icon" class="fa-solid fa-moon"></i>
+        
+        </nav>
+        
+        
         </div>
-      </div>
-    </header>
 
-    <section class="banner"></section>
 
-    <main>
-      <section class="my" id="top">
-        <h1>Sobre mim</h1>
+
+<main class="principal"> 
+
+    <article>
+
+        <header id="header">
+                <nav>
+                  <ul class="lista">
+                    <li><a href="#top" class="trans">sobre mim</a></li>
+                    <li><a href="#sob" class="trans">habilidades</a></li>
+                    <li><a href="#estud" class="trans">Meus estudos</a></li>
+                    <li><a href="#cont" class="trans">Entregas</a></li>
+                    <li><a href="#proj" class="trans">Projetos</a></li>
+                  </ul>
+                </nav>
+          </header>
+          
+          <div class="banner"></div>
+          
+    </article>
+
+    <section class="my" id="tema" >
+        <h1 id="top">Sobre mim</h1>
         <div class="display"></div>
       </section>
 
-      <section class="habili" id="sob">
-        <h1>habilidades</h1>
+      <section class="habili" id="tema">
+        <h1 id="sob">habilidades</h1>
         <div class="display"></div>
       </section>
 
-      <section class="studi" id="estud">
-        <h1>Academic</h1>
+
+    <section class="studi" id="tema">
+        <h1 id="estud">Academic</h1>
 
         <div class="display">
-          <section class="texto">
+          <section class="texto"id="tema">
             <p>
               Olá, meu nome é Christopher Willians Silva Couto, sou de São
               Paulo. Tenho um curso técnico em Análise e Desenvolvimento de
@@ -155,21 +196,20 @@
         </table>
       </section>
 
-      <section class="entregas" id="cont">
-        <h1>entregas</h1>
+      <section class="entregas" id="tema" >
+        <h1 id="cont">entregas</h1>
         <div class="display"></div>
       </section>
 
-      <section class="projetos" id="proj">
-        <h1>habilidades</h1>
+      <section class="projetos" id="tema">
+        <h1 id="proj">habilidades</h1>
         <div class="display"></div>
       </section>
-    </main>
 
-    <footer>
-      <div class="final">
-        <p>Desenvolvido por Christopher</p>
-      </div>
-    </footer>
-  </body>
+    <footer id="tema">a</footer>
+
+</main>
+
+
+</body>
 </html>

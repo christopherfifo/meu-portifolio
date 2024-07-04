@@ -1,81 +1,181 @@
+
 :root{
     --sol : #F39c12;
     --lua : #87CEEB;
 
-    --light_corpo : #ffffff;
-    --light_menu : #1300be;
-    --light_sobre : #1d99d3;
+    --light_corpo : #d3dbec;
+    --light_menu : #fff;
+    --light_titulo : #1300be;
+    --light_texto : #000000;
 
     --dark_corpo : #000000;
-    --dark_sobre : #181717;
-    --dark_menu : #881b92;
+    --dark_menu : #181717;
+    --dark_titulo : #881b92;
+    --dark_texto : #fff;
 
     --end : #333;
-}	
-
-html{
-    scroll-behavior: smooth;
-    background-color: var(--light_corpo);
-    height: 100%;
-    width: 100%;
 }
 
 *{
-    font-family: "Playfair Display", serif;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Playfair Display", serif;
 }
 
-main{
+
+body{
+    height: 1600vh;
+    background-color: var(--light_corpo);
+}
+
+/*********************** inicio do saidbar ********************/
+
+
+.contencao{
+    height: 100%;
+    width: 81px;/**/
+}
+
+nav.menu-lateral{
+    width: 80px;/**/
+    height: 150vh; /*pode ser 100%, no original ele pega a altura do bory, aqui é na conetação*/
+    background-color: var(--light_menu);
+    padding: 40px 0px 40px 0px;
+    box-shadow: 3px 0 0 var(--light_titulo);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+    left: 22px;
+    top: 1%;
+    position: absolute;
+    transform: scale(1.3);
+    
+}
+
+.btn-expandir > i{
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--light_texto);
+    padding: 20px 4%;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    padding-top: 35px;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: var(--light_titulo);
+}
+
+
+ul li.item-menu:hover{
+    background-color: var(--light_titulo);
+
+}
+
+ul li.item-menu:hover, ul li.item-menu a:hover{
+  color: var(--light_menu);
+
+}
+
+ul li.item-menu a{
+    color: var(--light_texto);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+    transition: .2s;
+}
+/*parte das letras virem*/
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .7s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+/*********************************************/
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 20px;
+
+}
+
+#mode_icon{
+    color: var(--light_texto);
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    transform: scale(1.9);
+    top: 60%;
+}
+
+
+/*********************** final do saidbar ********************/
+.principal{
+    min-width: calc(100% - 81px);
+    height: 1600vh;
+    left: 81px;
+    position: absolute;
     display: flex ;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-                                                /* elementos da cabeça */
+article{
+    top: 0;
+    width: 900px;
+    height: 90vh;
+    left: 14%;
+    position: absolute;
+}
 
 header{
     position: fixed ;
     top: 0;
-    left: 10%;
-    padding: 40px 4%;
     transition: 1s;
-    width: 80%;
+    width: 67.5%;
     border-radius: 32px;
+    height: 70px;;
+    z-index: 0;
 }
 
 header.rolagem{
-    background-color: var(--dark_menu);
-    padding: 20px 4%;
+    background-color: var(--light_menu);
     top: 15px;
 }
                                         /* quando rolar o scroll muda de cor*/
 header.rolagem a{
-    color: var(--light_corpo);
-}        
-
-header.rolagem .fa-moon{
-    color:var(--lua);
-}    
-
-header.rolagem .fa-sun{
-    color:var(--sol);
+    color: var(--light_titulo);
 }   
-                                       /**/
-
-.container{
-    max-width: 100%;
-    margin: auto;
-}
-
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 header ul{
     list-style: none;
@@ -94,12 +194,6 @@ header ul li a{
     text-decoration: none;
 }
 
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-                                                /*  opacidade dos elementos do nav */
-
 .trans:hover{
     text-decoration: underline;
     transform: scale(1.05);
@@ -109,212 +203,161 @@ header ul li a{
 .lista:hover > :not(:hover){ /*seleciona todos os elementos que não estão sendo hover*/
     opacity: 0.3;
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-                                                /* icone do sol e lua     */
-
-#mode_icon{
-    cursor: pointer;
-    font-size: 20px;
-    transform: scale(1.20);
-}
-.fa-sun{
-    color: var(--light_corpo);
-}
-
-.fa-moon{
-    color: var(--light_corpo);
-}
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/	
-
-
-                                                /* parte do banner */
 .banner{
-    height: 100vh;
+    height: 100%;
     background-image: url(../imagens/O1GnXT.gif);
     background-position: center;
     background-size: cover;
-    border-radius: 0 0 2% 2%;
+    border-radius: 2%;
     overflow: hidden;
+    width: 100%;
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-                                        /*sobre mim*/
+
+
 
 .studi{
-background-color:var(--dark_sobre) ;
-width: 90%;
-height: 170vh;
-gap: 30px;
-border-radius: 5%;
-}
-
-.studi h1{
-    color: var(--light_corpo);
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.display{
-    max-width: 100%;
-    height: 70vh;
+    background-color:var(--light_menu) ;
+    border-radius: 5%;
+    width: 900px;
+    height: 200vh;
+    left: 14%;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    justify-content: space-around;
-    gap: 15px;
-    padding: 0px 20px 0px 20px;
-}
-
-.texto{
-    width: 50%;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 4%;
-    background-color: var(--dark_corpo);
-}
-
-.texto p{
-    margin: 10px 0;
-    color: var(--light_corpo);
-}
-
-iframe{
-    width: 50%;
-    overflow: hidden;
-    border-radius: 3%;
-    height: 100%;
-}
-
-/* Estilo para a tabela de disciplinas */
-.tabela-disciplinas {
-    width: 90%; /* Largura total */
-    border-collapse: collapse; /* Colapsa as bordas para um único traço */
-    border-radius: 38px;
-    color: var(--light_corpo); /* Cor do texto */
-    margin-top: 20px ;
-    margin-bottom: 20px ;
-    right: 15%;
-    margin-left: 5%;
-    margin-right: 5%;
-    overflow: hidden;
-}
-
-
-.tabela-disciplinas th, .tabela-disciplinas td {
-    text-align: left; /* Alinhamento de texto à esquerda */
-    padding: 8px; /* Espaçamento interno */
-}
-
-/* Cores alternadas para as linhas */
-.tabela-disciplinas tr:nth-child(even) {
-    background-color: var(--end); /* Cor de fundo para linhas pares */
-}
-
-.tabela-disciplinas tr:nth-child(odd) {
-    background-color: #444; /* Cor de fundo para linhas ímpares */
-}
-
-.tabela-disciplinas th {
-    background-color: #222; /* Cor de fundo para o cabeçalho */
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-                                                /* final da pagina */
-
-.final{
-    padding: 10px 0;
-    text-align: center;
-}
-
-
+    flex-direction: column;
+    gap: 10px;
+    }
     
+    .studi h1{
+        color: var(--light_titulo);
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    .display{
+        max-width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        padding: 0px 20px 0px 20px;
+    }
+    
+    .texto{
+        width: 50%;
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 4%;
+        background-color: var(--light_titulo);
+    }
+    
+    .texto p{
+        margin: 10px 0;
+        color: var(--light_menu);
+    }
+    
+    iframe{
+        width: 50%;
+        overflow: hidden;
+        border-radius: 3%;
+        height: 100%;
+    }
+    
+    /* Estilo para a tabela de disciplinas */
+    .tabela-disciplinas {
+        width: 90%; /* Largura total */
+        border-collapse: collapse; /* Colapsa as bordas para um único traço */
+        border-radius: 38px;
+        color: var(--light_corpo); /* Cor do texto */ 
+        overflow: hidden;
+        margin-top: 18px;
+    }
+    
+    
+    .tabela-disciplinas th, .tabela-disciplinas td {
+        text-align: left; /* Alinhamento de texto à esquerda */
+        padding: 8px; /* Espaçamento interno */
+    }
+    
+    /* Cores alternadas para as linhas */
+    .tabela-disciplinas tr:nth-child(even) {
+        background-color: var(--end); /* Cor de fundo para linhas pares */
+    }
+    
+    .tabela-disciplinas tr:nth-child(odd) {
+        background-color: #444; /* Cor de fundo para linhas ímpares */
+    }
+    
+    .tabela-disciplinas th {
+        background-color: #222; /* Cor de fundo para o cabeçalho */
+    }
+
+.my{
+    background-color:var(--light_menu) ;
+    border-radius: 5%;
+    width: 900px;
+    height: 200vh;
+    left: 14%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.habili{
+    background-color:var(--light_menu) ;
+    border-radius: 5%;
+    width: 900px;
+    height: 200vh;
+    left: 14%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.entregas{
+    background-color:var(--light_menu) ;
+    border-radius: 5%;
+    width: 900px;
+    height: 200vh;
+    left: 14%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.projetos{
+    background-color:var(--light_menu) ;
+    border-radius: 5%;
+    width: 900px;
+    height: 200vh;
+    left: 14%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 footer{
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-size: 30px;
     background-color: var(--end);
     color: var(--light_corpo);
+
 }
 
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.habili{
-    background-color: var(--dark_sobre);
-    padding: 20px;
-    border-radius: 5%;
-    margin: 20px;
-    width: 90%;
-height: 170vh;
-}
-
-.habili h1{
-    color: var(--light_corpo);
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-
-.my{
-    background-color: var(--dark_sobre);
-    padding: 20px;
-    border-radius: 5%;
-    margin: 20px;
-    width: 90%;
-height: 170vh;
-}
-
-.my h1{
-    color: var(--light_corpo);
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.entregas{
-    background-color: var(--dark_sobre);
-    padding: 20px;
-    border-radius: 5%;
-    margin: 20px;
-    width: 90%;
-    height: 170vh;
-}
-
-.entregas h1{
-    color: var(--light_corpo);
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.projetos{
-    background-color: var(--dark_sobre);
-    padding: 20px;
-    border-radius: 5%;
-    margin: 20px;
-    width: 90%;
-    height: 170vh;
-}
-
-.projetos h1{
-    color: var(--light_corpo);
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
+    /**************************** modo dark *********************************8*/
 .dark{
     background-color: var(--dark_corpo);
+    color: var(--dark_texto);
 }
