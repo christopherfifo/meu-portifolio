@@ -1,6 +1,6 @@
 :root {
     --sol: #F39c12;
-    --lua: #87CEEB;
+    --lua: #87c6df;
 
     --light_corpo: #d3dbec;
     --light_menu: #fff;
@@ -123,12 +123,19 @@ ul li.item-menu a .icon > i {
 }
 
 #mode_icon {
-    color: var(--light_texto);
     cursor: pointer;
     position: absolute;
     left: 30px;
     transform: scale(1.9);
     top: 92%;
+}
+
+.fa-sun {
+    color: var(--sol);
+}
+
+.fa-moon {
+    color: var(--lua);
 }
 
 /******** final do sidebar *******/
@@ -213,7 +220,7 @@ header ul li a {
 .projetos {
     background-color: var(--light_menu);
     border-radius: 5%;
-    width: 900px;
+    width: 1100px;
     height: 200vh;
     align-items: center;
     justify-content: center;
@@ -249,6 +256,7 @@ header ul li a {
 .texto p {
     margin: 10px 0;
     color: var(--light_menu);
+    text-align: center;
 }
 
 iframe {
@@ -303,3 +311,11 @@ footer {
     background-color: var(--dark_corpo);
     color: var(--dark_texto);
 } 
+
+header.rolagem.dark, nav.menu-lateral.dark {
+    background-color: var(--dark_menu);
+}
+
+ul li.item-menu.dark a {
+    color: var(--dark_texto);
+}

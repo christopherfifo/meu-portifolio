@@ -25,6 +25,7 @@ btnExp.addEventListener('click', function () {
 
 //! javascript do troca de tema
 
+
                               //todo : mudar o modo de tema e  mudar video
 const video = document.querySelector("#video");
 const mode = document.getElementById("mode_icon");
