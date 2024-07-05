@@ -139,7 +139,7 @@ ul li.item-menu a .icon > i {
 }
 
 /******** final do sidebar *******/
-.principal {
+.principal{
     width: calc(100% - 81px);
     height: 1600vh;
     display: flex;
