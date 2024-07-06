@@ -60,7 +60,15 @@ mode.addEventListener("click", () => {
   video.setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&si=Wmw2lqvlOxuWPs5S");
 });
 
+//! javascript mudar input/label
 
+//todo: muadar idioma
+
+// const chk = document.getElementById("#chk");
+
+// chk.addEventListener("change", () => {
+
+// })
 
 //! javascript do header
 
