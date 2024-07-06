@@ -30,6 +30,7 @@ btnExp.addEventListener('click', function () {
 const video = document.querySelector("#video");
 const mode = document.getElementById("mode_icon");
 const body = document.querySelector("body");
+const array_tema = document.querySelectorAll("#tema");
 
 mode.addEventListener("click", () => {
   
@@ -39,12 +40,12 @@ mode.addEventListener("click", () => {
     mode.classList.toggle("fa-moon");
     mode.classList.toggle("fa-sun");
 
-    body.classList.toggle("dark");
+    for(temaa  of array_tema){
+      temaa.classList.toggle("dark");
+    }
 
     video.setAttribute(
       "src", "https://www.youtube.com/embed/4xDzrJKXOOY?autoplay=1&si=N7EwsVwPv_3rkGUw");
-
-
       
     return; 
   }
@@ -52,7 +53,9 @@ mode.addEventListener("click", () => {
   mode.classList.toggle("fa-moon");
   mode.classList.toggle("fa-sun");
 
-  body.classList.toggle("dark");
+  for(temaa  of array_tema){
+    temaa.classList.toggle("dark");
+  }
 
   video.setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&si=Wmw2lqvlOxuWPs5S");
 });

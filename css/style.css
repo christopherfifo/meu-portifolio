@@ -60,6 +60,13 @@ nav.menu-lateral.expandir {
     top: 1%;
     position: absolute;
     transform: scale(1.3);
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir .btn-expandir{
+    padding-left: 35px;
+    
+
 }
 
 .btn-expandir > i {
@@ -164,6 +171,9 @@ header {
     border-radius: 32px;
     height: 70px;
     z-index: 0;
+    display: flex; /* Torna o header um contêiner flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center;
 }
 
 header.rolagem {
@@ -178,6 +188,10 @@ header.rolagem a {
 
 header ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between; /* Centraliza os itens da lista horizontalmente */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0;
 }
 
 header ul li {
@@ -306,6 +320,79 @@ footer {
     color: var(--light_corpo);
 }
 
+.sun{
+    background: linear-gradient(
+        174deg,
+        rgba(255, 0, 0, 1) 44%,
+        rgba(255, 123, 0, 1) 63%
+);
+    height: 50vmin;
+    width: 50vmin;
+    margin-top: 28vmin;
+    border-radius: 50%;
+    box-shadow: 0 -0.5vmin 4vmin red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reflection{
+    position: relative;
+    background: rgba(255, 123, 0, 1);
+    color: rgba(255, 123, 0, 1);
+    width: 50vmin;
+    height: 3.8vmin;
+    border-radius: 50%;
+    top: 17vmin;
+    box-shadow: 0.5vmin 0 2vmin, -0.5vmin 0 2vmin;
+    animation: fade 3s ease-out infinite;
+}
+
+.reflection::after{
+    content: "";
+    position: absolute;
+    background: rgba(255, 123, 0, 1);
+    color: rgba(255, 123, 0, 1);
+    width: 52vmin;
+    height: 7vmin;
+    border-radius: 50% 90% 50% 80%;
+    top: 2.5vmin;
+    box-shadow: 0.5vmin 0 2vmin, -0.5vmin 0 2vmin;
+}
+
+.reflection::before{
+    content: "";
+    position: absolute;
+    background: rgba(255, 123, 0, 1);
+    color: rgba(255, 123, 0, 1);
+    width: 43vmin;
+    height: 6vmin;
+    left: 5vmin;
+    border-radius: 50% 90% 50% 80%;
+    top: 7vmin;
+    box-shadow: 0.5vmin 0 2vmin, -0.5vmin 0 2vmin;
+    animation: tide 3s ease-out infinite;
+}
+
+
+@keyframes fade{
+    50%{
+        transform: translateY(-0.5vmin) scaleY(0.7);
+    }
+}
+
+@keyframes tide {
+    25%{
+        transform: translateY(0.3vmin) scale(1, 1.2);
+    }
+    50%{
+        transform: translateY(0.5vmin) scale(1.1, 1.2);
+    }
+    100%{
+        transform: translateY(-1vmin) scale(0.99, 1.3);
+    }
+}
+
 /********** modo dark ***********/
 .dark {
     background-color: var(--dark_corpo);
@@ -319,3 +406,6 @@ header.rolagem.dark, nav.menu-lateral.dark {
 ul li.item-menu.dark a {
     color: var(--dark_texto);
 }
+
+
+
