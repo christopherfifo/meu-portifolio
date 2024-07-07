@@ -30,7 +30,7 @@ btnExp.addEventListener('click', function () {
 const video = document.querySelector("#video");
 const mode = document.getElementById("mode_icon");
 const body = document.querySelector("body");
-const array_tema = document.querySelectorAll("#tema");
+const array_tema = document.querySelectorAll(".tema");
 
 mode.addEventListener("click", () => {
   
