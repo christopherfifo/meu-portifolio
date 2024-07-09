@@ -549,18 +549,54 @@ header ul li a {
 }
 
 /**************************************** fim *********************************************************/
-.studi,
-.my,
-.habili{
+.studi {
     background-color: var(--light_menu);
     border-radius: 5%;
     width: 1100px;
     height: 200vh;
     align-items: center;
-    justify-content: center;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     gap: 10px;
+}
+
+.habili{
+    background-color: var(--light_menu);
+    border-radius: 5%;
+    width: 100%;
+    height: 200vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.espaco{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}	
+
+.img-chris{
+    border-radius: 10px;
+    height: 90vh;
+    width: 90vh;
+}
+
+.servico{
+    width: 100vh;
+    background-color: var(--light_titulo);
+    height: 100%;
+    font-size: 20px;
+    border-radius: 5%;
+   text-align: center;
+   align-items: center;
+   display: flex;
+   color: var(--light_menu);
 }
 
 .projetos{
@@ -573,6 +609,13 @@ header ul li a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.favoritos{
+    background-color: var(--light_menu);
+    border-radius: 5%;
+    width: 100%;
+    height: 80vh;
 }
 /*************************************************** entregas ********************************************/
 .entregas {
@@ -654,18 +697,18 @@ h1.titulo{
     padding: 0px 20px;
 }
 
+
+
 .texto {
+    color: var(--light_menu);
+    text-align: center;
     width: 50%;
-    padding: 20px;
     font-size: 20px;
     border-radius: 4%;
     background-color: var(--light_titulo);
-}
-
-.texto p {
-    margin: 10px 0;
-    color: var(--light_menu);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 iframe {
@@ -830,9 +873,8 @@ ul li.item-menu a:hover {
 
 
 .studi.dark,
-.my.dark,
 .habili.dark,
-.projetos.dark{
+.projetos.dark,.favoritos.dark{
     background-color: var(--dark_menu);
 }
 
@@ -869,7 +911,7 @@ p.content-description.dark, .content-title.dark{
 h1.titulo.dark{
     color: var(--dark_titulo);
 }
-.texto.dark{
+.texto.dark, .servico.dark{
     background-color: var(--dark_titulo);
 }
 

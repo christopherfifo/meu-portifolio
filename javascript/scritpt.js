@@ -150,3 +150,6 @@ const tabClicked = (tab) => {
 
 const currentActiveTab = document.querySelector('.tab-btn.active');
 tabClicked(currentActiveTab);
+
+//! javscript do carrosel
+
