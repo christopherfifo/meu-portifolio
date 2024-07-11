@@ -14,6 +14,7 @@ function selectLink() {
 menuItem.forEach((item) => item.addEventListener('click', selectLink));
 
 
+
 //todo: expandir menu
 
 const btnExp = document.querySelector('#btn-exp');
@@ -151,5 +152,14 @@ const tabClicked = (tab) => {
 const currentActiveTab = document.querySelector('.tab-btn.active');
 tabClicked(currentActiveTab);
 
-//! javscript do carrosel
+//! javscript do menu dos projetos
+
+const menuFiltro = document.querySelectorAll('.classe')
+
+function selectLink() {
+  menuFiltro.forEach((filtro) => filtro.classList.remove('presente'));
+  this.classList.add('presente');
+}
+
+menuFiltro.forEach((filtro) => filtro.addEventListener('click', selectLink));
 
