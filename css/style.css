@@ -743,7 +743,7 @@ iframe {
 .tab-btn {
     width: 100%;
     border: none;
-    color: var(--light_texto);
+    color: var(--light_corpo);
     background-color: var(--light_titulo);
     border-radius: 8px 8px 0px 0px;
     font-weight: 500;
@@ -754,6 +754,7 @@ iframe {
 
 .tab-btn.active {
     background-color: var(--light_menu);
+    color: var(--dark_corpo);
 }
 
 .tab-btn:hover {
@@ -778,6 +779,7 @@ iframe {
 .content-img {
     width: 90%;
     height: 370px;
+    border-radius: 30px;
 }
 
 p.content-description, .content-title{
@@ -870,58 +872,81 @@ p.content-description, .content-title{
 }
 
 
-.html{
-    background-color: rgba(252, 33, 33, 0.89);
+/* HTML */
+.html {
+    background-color: rgb(227, 76, 38);
 }
 
-.css{
-    background-color: lightblue;
+/* JavaScript */
+.javascript {
+    background-color: rgb(240, 219, 79);
 }
 
-.javascript{
-    background-color: yellow;
+/* Jupyter */
+.jupyter {
+    background-color: rgb(255, 103, 0);
 }
 
-.react{
-    background-color: lightblue;
+/* CSS */
+.css {
+    background-color: rgb(38, 77, 228);
 }
 
-.node{
-    background-color: green;
+/* React */
+.react {
+    background-color: rgb(97, 218, 251);
 }
 
-.express{
-    background-color: lightblue;
+/* Node.js */
+.nodejs {
+    background-color: rgb(93, 155, 85);
 }
 
-.typescript{
-    background-color: blue;
+/* TypeScript */
+.typescript {
+    background-color: rgb(0, 122, 204);
 }
 
+/* Express.js */
+.expressjs {
+    background-color: rgb(0, 0, 0);
+}
+
+/* C */
+.c {
+    background-color: rgb(104, 33, 122);
+}
+
+/* C++ */
+.cpp {
+    background-color: rgb(73, 190, 104);
+}
+
+/* C# */
+.csharp {
+    background-color: rgb(255, 203, 66);
+}
+
+/* Python */
 .python{
-    background-color: yellow;
+    background-color: rgb(53, 114, 165);
 }
 
-.c{
-    background-color: orange;
+/* SQL */
+.sql {
+    background-color: rgb(0, 115, 155);
 }
 
-.cmais{
-    background-color: darkblue;
+/* NoSQL */
+.nosql {
+    background-color: rgb(153, 51, 204);
 }
 
-.csharp{
-    background-color: darkmagenta;
-}
-
-.bd{
-    background-color: slateblue;
-}
 
 .navegacao{
     background-color: white;
     width: 1100px;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     overflow-y: scroll;
     border-radius: 15px;
@@ -992,6 +1017,9 @@ p.content-description, .content-title{
 
 .cartoes .titulo{
     color: var(--light_menu);
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin: 0 5px 10px 5px ;
 }
 
 .linguagem{
@@ -1015,10 +1043,11 @@ p.content-description, .content-title{
 	position: fixed;
 	display: flex;
 	background-color: rgba(0, 0, 0, 0.4); 
-	z-index: 1000;
+	z-index: 7;
     align-items: center;
     justify-content: center;
 }
+
 
 .span .tudo-proj{
     width: 1100px;
@@ -1029,6 +1058,7 @@ p.content-description, .content-title{
     gap: 10px;
     padding: 10px;
     border-radius: 15px;
+
 }
 
 .span .tudo-proj img{
@@ -1060,8 +1090,13 @@ p.content-description, .content-title{
     flex-direction: column;
     justify-content: center;
     align-items: center;;
+    gap: 10px;
 }
 
+.info-proj .titulo{
+    margin-bottom: 10px;
+    color: var(--dark_corpo);
+}
 
  .tudo-proj{
 display: none;
