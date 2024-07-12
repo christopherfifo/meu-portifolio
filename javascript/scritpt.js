@@ -163,3 +163,45 @@ function selectLink() {
 
 menuFiltro.forEach((filtro) => filtro.addEventListener('click', selectLink));
 
+//! javscript de mudar o coração de vazio para cheio
+
+const amor = document.querySelectorAll('.star')
+
+for (color of amor) {
+    color.addEventListener('click', funCor)
+}
+
+function funCor(event) {
+    // Obtém o elemento clicado, quem disparou o evento
+    const clickedElement = event.target;
+    
+    // Alterna as classes do elemento clicado
+    clickedElement.classList.toggle('fa-solid')
+    clickedElement.classList.toggle('fa-regular')
+}
+
+//! javascript para mudar a visibilidade do span
+document.querySelectorAll('.visualizar').forEach(button => {
+    button.addEventListener('click', function() {
+        // Encontra a li parente mais próxima
+        const li = this.closest('li');
+        // Encontra a div com id "span" dentro dessa li
+        const spanDiv = li.querySelector('.janela');
+        // Adiciona a classe "span" a essa div
+        spanDiv.classList.add('span');
+    });
+});
+
+document.querySelectorAll('.p_fechar').forEach(closeSpan => {
+    closeSpan.addEventListener('click', function() {
+        // Encontra a div parente mais próxima com id "span"
+        const spanDiv = this.closest('.janela');
+        // Remove a classe "span" dessa div
+        spanDiv.classList.remove('span');
+    });
+});
+
+
+// mudei #span por janela e o #p_fechar por p_fechar
+
+

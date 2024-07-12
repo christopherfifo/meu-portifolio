@@ -208,6 +208,20 @@ ul li.item-menu a .icon > i {
     overflow: hidden;/*tem que se ver obrigatório ter se não buga tudo*/
 }
 
+.flutuante{
+    position: fixed;
+    bottom: 5%;
+    z-index: 6;
+    left: 95%;
+}
+
+.flutuante i{
+    font-size: 30px;
+    transform: scale(1.5);
+    color:  #25D366;
+    cursor: pointer;
+}
+
 article {
     width: 100%;
     height: 100vh;
@@ -763,8 +777,7 @@ iframe {
 
 .content-img {
     width: 90%;
-    height: 350px;
-    object-fit: cover;/* ponto de atenção para alterações fulturas*/
+    height: 370px;
 }
 
 p.content-description, .content-title{
@@ -839,8 +852,6 @@ p.content-description, .content-title{
     align-items: center;
 }
 
-
-
 .classe{
     color: var(--light_titulo);
     font-size: 20px;
@@ -858,16 +869,214 @@ p.content-description, .content-title{
     opacity: 1;
 }
 
+
+.html{
+    background-color: rgba(252, 33, 33, 0.89);
+}
+
+.css{
+    background-color: lightblue;
+}
+
+.javascript{
+    background-color: yellow;
+}
+
+.react{
+    background-color: lightblue;
+}
+
+.node{
+    background-color: green;
+}
+
+.express{
+    background-color: lightblue;
+}
+
+.typescript{
+    background-color: blue;
+}
+
+.python{
+    background-color: yellow;
+}
+
+.c{
+    background-color: orange;
+}
+
+.cmais{
+    background-color: darkblue;
+}
+
+.csharp{
+    background-color: darkmagenta;
+}
+
+.bd{
+    background-color: slateblue;
+}
+
 .navegacao{
-    background-color: var(--light_menu);
+    background-color: white;
     width: 1100px;
-    height: 270vh;
+    height: 100vh;
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
     overflow-y: scroll;
     border-radius: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    top: 0;
+    gap: 20px;
+}
+
+.cartoes{
+    background-color: rgba(77, 72, 72, 0.904);
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    padding: 10px;
+}
+
+.cartoes img{
+    width: 80%;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.cartoes a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+.cartoes .visualizar{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}	
+
+.fa-regular.star{
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--light_menu);
+}
+
+.fa-solid.star{
+    font-size: 23px;
+    cursor: pointer;
+    color: red;
+}
+
+.cartoes section{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartoes .titulo{
+    color: var(--light_menu);
+}
+
+.linguagem{
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.informa{
+    display: flex;
+    gap:25px;
+    align-items: center;
+}
+
+
+.span {
+	top: 0;  
+	left: 0;
+	height: 100%;  
+	width: 100%;
+	position: fixed;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.4); 
+	z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.span .tudo-proj{
+    width: 1100px;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.span .tudo-proj img{
+    width: 50%;
+    height: 90%;
+    display: flex;
+}
+
+.span .tudo-proj i{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    color: black;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    display: flex;
+}
+
+.span .tudo-proj i:hover{
+    color: red;
+}
+
+.span .info-proj{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+
+ .tudo-proj{
+display: none;
+}
+ .tudo-proj img{
+    display: none;
+}
+
+.tudo-proj i{
+    display: none;
+}
+
+
+ .info-proj{
+    display: none;
 }
 
 footer {
@@ -1028,6 +1237,13 @@ p.content-description.dark, .content-title.dark{
     color: var(--dark_texto);
 }
 
+.cartoes .titulo.dark{
+    color:var(--dark_corpo);
+}
+
+.cartoes.dark{
+    background-color: rgba(253, 253, 253, 0.952);
+}
 
 .titulo.dark, .classe.dark{
     color: var(--dark_titulo);
@@ -1052,3 +1268,13 @@ p.content-description.dark, .content-title.dark{
     background-color: #fff;
     color: #000;
 }
+
+.fa-regular.star.dark{
+    color: var(--dark_corpo);
+}
+
+.visualizar.dark{
+    background-color: var(--dark_corpo);
+    color: var(--dark_texto);
+}
+
