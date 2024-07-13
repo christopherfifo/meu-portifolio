@@ -25,7 +25,7 @@
 }
 
 body {
-    height: 1600vh;
+    height: 1100vh;
     background-color: var(--light_corpo);
     display: flex;
 }
@@ -200,7 +200,7 @@ ul li.item-menu a .icon > i {
 /******** final do sidebar *******/
 .principal{
     width: calc(100% - 81px);
-    height: 1600vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -792,29 +792,9 @@ p.content-description, .content-title{
 
 
 /**************************fim das entregas *****************************/
-.favoritos{
-    background-color: var(--light_menu);
-    border-radius: 5%;
-    width: 85%;
-    height: 80vh;
-}
-
-.favoritos .titulo{
-    color: var(--light_titulo);
-    text-align: center;
-    margin-bottom: 20px;
-    transform: scale(1.5);
-    margin-top: 25px;
-}
-
-
-.favoritos .titulo i{
-    color: red;
-}
 .projetos{
-    /* background-color: var(--light_menu); */
     width: 100%;
-    height: 300vh;
+    height: 250vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -946,7 +926,7 @@ p.content-description, .content-title{
 .navegacao{
     background-color: white;
     width: 1100px;
-    height: 120vh;
+    height: 140vh;
     display: flex;
     overflow-y: scroll;
     border-radius: 15px;
@@ -977,6 +957,7 @@ p.content-description, .content-title{
     width: 80%;
     height: 200px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 .cartoes a{
@@ -1119,10 +1100,18 @@ footer {
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 101vh;
     font-size: 30px;
     background-color: var(--end);
     color: var(--light_corpo);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer h1{
+    width: 100%;
+    top:10px;
+    text-align: center;
 }
 
 .sun{
@@ -1239,7 +1228,7 @@ ul li.item-menu a:hover {
 }
 
 
-.studi.dark, .navegacao.dark, .habili.dark, .filtro.dark,.favoritos.dark{
+.studi.dark, .navegacao.dark, .habili.dark, .filtro.dark{
     background-color: var(--dark_menu);
 }
 
