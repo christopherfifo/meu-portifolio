@@ -922,11 +922,52 @@ p.content-description, .content-title{
     background-color: rgb(153, 51, 204);
 }
 
+#no_results {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Grupo do input de pesquisa */
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 8px 16px 8px 8px;
+    border-radius: 24px;
+    gap: 8px;
+}
+
+/* Ícone do input de pesquisa */
+.input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 100%;
+    background-color: #6046ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Campo de input de pesquisa */
+.input-field {
+    width: 100%;
+    border: none;
+    background-color: transparent; 
+}
+
+/* Remove a borda quando o campo está em foco */
+.input-field:focus{
+    outline: none;
+}
+
 
 .navegacao{
     background-color: white;
     width: 1100px;
-    height: 140vh;
+    height: 90vh;
     display: flex;
     overflow-y: scroll;
     border-radius: 15px;
@@ -1001,6 +1042,10 @@ p.content-description, .content-title{
     font-size: 13px;
     margin-bottom: 10px;
     margin: 0 5px 10px 5px ;
+}
+
+.item-description {
+    display: none;
 }
 
 .linguagem{
@@ -1110,9 +1155,11 @@ footer {
 
 footer h1{
     width: 100%;
-    top:10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
 
 .sun{
     background: linear-gradient(
@@ -1122,7 +1169,6 @@ footer h1{
 );
     height: 50vmin;
     width: 50vmin;
-    margin-top: 28vmin;
     border-radius: 50%;
     box-shadow: 0 -0.5vmin 4vmin red;
     display: flex;
@@ -1302,3 +1348,17 @@ p.content-description.dark, .content-title.dark{
     color: var(--dark_texto);
 }
 
+.input-icon.dark{
+    background-color: var(--dark_titulo);
+}
+.input-group.dark{
+    background-color: var(--dark_menu);
+} 
+
+.input-field.dark{ 
+    color: var(--light_menu);
+}
+
+#no_results .dark{
+    color: var(--light_menu);
+}

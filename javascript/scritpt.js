@@ -205,3 +205,105 @@ document.querySelectorAll('.p_fechar').forEach(closeSpan => {
 // mudei #span por janela e o #p_fechar por p_fechar
 
 
+//! javascript para mudar de pesquisa
+
+// Seleciona o input de busca
+const searchInput = document.getElementById('search');
+
+// Quando o usuário interagir com o input, esta função será executada
+searchInput.addEventListener('input', (event) => {
+    const value = formatString(event.target.value); // Armazena e formata o valor do input
+
+    const items = document.querySelectorAll('.navegacao .cartoes'); // Seleciona todos os itens, dentro da ul pega todos os li
+    const noResults = document.getElementById('no_results'); // Seleciona o elemento da mensagem "nenhum resultado"
+    let hasResults = false; // Indica se há resultados correspondentes
+
+    // Se existir valor no input
+    if (value !== '') {
+        items.forEach(item => {
+            const itemTitle = item.querySelector('.item-title').textContent; // Obtém o texto do título do item
+            const itemDescription = item.querySelector('.item-description').textContent; // Obtém o texto da descrição do item
+
+            // Se o valor digitado está contido nesse texto
+            if (formatString(itemTitle).indexOf(value) !== -1
+                || formatString(itemDescription).indexOf(value) !== -1
+            ) {
+                // Exibe o item
+                item.style.display = 'flex';
+
+                // Indica que existem resultados
+                hasResults = true;
+            } else {
+                // Oculta o item
+                item.style.display = 'none';
+            }
+        });
+
+        // Exibe ou oculta a mensagem "nenhum resultado"
+        if (hasResults) {
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block';
+        }
+
+    } else {
+        // Sempre exibe todos os itens quando o input está vazio
+        items.forEach(item => item.style.display = 'flex');
+        noResults.style.display = 'none'; // Oculta a mensagem "nenhum resultado"
+    }
+});
+
+// Função para formatar strings: remove espaços em branco, transforma em lowercase e remove acentos
+function formatString(value) {
+    return value
+        .trim() // Remove espaços em branco
+        .toLowerCase() // Transforma em lowercase
+        .normalize('NFD') // Normaliza para separar os acentos
+        .replace(/[\u0300-\u036f]/g, ''); // Remove os acentos
+}
+
+
+//! javascript para ativar o filtro
+
+document.querySelectorAll('.classe').forEach(item => {
+  item.addEventListener('click', function() {
+
+    // Pega o valor do item clicado
+    const valorLi = this.textContent.trim();
+
+    // Seleciona todos os cartões
+    const cartoes = document.querySelectorAll('.cartoes');
+    
+    if (valorLi.toLowerCase() !== "todos") {
+      cartoes.forEach(cartao => {
+        const itemDescription = cartao.querySelector('.item-description').textContent.trim();
+
+        // Formata as strings para comparação
+        const formattedValorLi = formatString(valorLi);
+        const formattedItemDescription = formatString(itemDescription);
+
+        // Verifica se a descrição do cartão contém o valor da li clicada
+        if (formattedItemDescription.indexOf(formattedValorLi) !== -1) {
+          // Exibe o cartão
+          cartao.style.display = 'flex';
+        } else {
+          // Oculta o cartão
+          cartao.style.display = 'none';
+        }
+      });
+    } else {
+      // Se o valor for 'todos', exibe todos os cartões
+      cartoes.forEach(cartao => cartao.style.display = 'flex');
+    }
+  });
+});
+
+// Função para formatar strings: remove espaços em branco, transforma em lowercase e remove acentos
+function formatString(value) {
+  return value
+    .trim() // Remove espaços em branco
+    .toLowerCase() // Transforma em lowercase
+    .normalize('NFD') // Normaliza para separar os acentos
+    .replace(/[\u0300-\u036f]/g, ''); // Remove os acentos
+}
+
