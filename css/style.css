@@ -1295,9 +1295,6 @@ ul li.item-menu a:hover {
     background-color: var(--dark_detalhe);
 }
 
-.conteudo {
-    display: none;
-}
 
 .conteudo.show.dark {
     background-color:var(--dark_menu);
@@ -1362,3 +1359,332 @@ p.content-description.dark, .content-title.dark{
 #no_results .dark{
     color: var(--light_menu);
 }
+
+.tentativa.dark{
+    color: var(--dark_texto);
+}
+
+.gambi{
+    display:none;
+}
+
+.tentativa{
+    display: none;
+}
+
+.amem{
+    display: none;
+}
+
+.amem i{
+    color: rgba(255, 54, 54, 0.973);
+}
+
+@media(max-width: 685px) {
+    body{
+        height: 1000dvh;
+    }
+    .contencao{
+        display:none;
+        z-index: 8;
+        width: 10px;
+    }
+    .menu-lateral{
+        width: 80px;
+    }
+    .gambi{
+        display: flex;
+    }
+    .tentativa{
+        display: flex;
+        font-size: 17px;
+    }
+    .jesus{
+        display: none;
+    }
+    .amem{
+        display: flex;
+        color: rgba(248, 58, 58, 0.89);
+    }
+    .mobi{
+        display: none;
+    }
+    .principal{
+        width: 100%;
+    }
+    .flutuante{
+        left: 87%;
+        bottom: 2%;
+    }
+    header{
+    width: 100dvh;
+    border-radius: 0;
+    }
+    header.rolagem{
+        top: 0;
+    }
+    header ul{
+        margin: 8px;
+        justify-content: space-between;
+    }
+    header ul li{
+        margin: 6px;
+    }
+    header ul li a{
+        font-size: 16px;
+    }
+    .slider .list .item .content{
+        top: 10%;
+        width: 100%;
+        padding-right: 0;
+        left: 45%;
+    }
+    .slider .list .item .content .title{
+        font-size: 36px;
+    }
+    .habili{
+        height: 150dvh;
+    }
+    .habili .titulo{
+        top: 0;
+        padding-bottom:20px ;
+    }
+    .espaco{
+        flex-direction: column;
+        height: 100dvh;
+    }
+    .img-chris{
+        width: 90%;
+        height: 85%;
+    }
+    .servico{
+        width: 100%;
+        height: 60dvh;
+        border-radius: 0;
+    }
+    .logos{
+        height: 40dvh;
+    }
+    .img-logo{
+        height: 30dvh;
+    }
+    .studi{
+        width: 100%;
+        height: 150dvh;
+        border-radius: 0;
+    }
+    .display{
+        padding: 0;
+    }
+    .video{
+        display:none;
+    }
+    .texto{
+        width: 100%;
+        border-radius: 0;
+    }
+    .entregas{
+        width: 100%;
+        border-radius: 0;
+    }
+    .conteudo.show{
+        padding: 10px;
+        border-radius: 0;
+    }
+    .tab-buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .projetos{
+        width: 100%;
+        height: 150vh;
+    }
+    .filtro{
+        width: 100%;
+        border-radius: 0;
+    }
+    .filtro ul{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .navegacao{
+        width: 100%;
+        height: 60dvh;
+        padding-left: 50px;
+    }
+    .span .tudo-proj img{
+        height: 70%;
+    }
+    .span .tudo-proj  i{
+        right: 5%;
+    }
+    footer{
+        height: 100dvh;
+    }
+    footer p{
+        font-size: 20px;
+     }
+     .tabela-disciplinas{
+        width: 250px;
+        border-radius: 0;
+     }
+     .tabela-disciplinas th,
+     .tabela-disciplinas td {
+         font-size: 8px; /* Ajuste o tamanho da fonte conforme necessário */
+         padding: 1px; /* Ajuste o padding conforme necessário */
+     }
+}
+
+
+@media(min-width: 690px) and (max-width: 1100px){
+    body{
+        height: 1000dvh;
+    }
+    .contencao{
+        display:none;
+        z-index: 8;
+        width: 10px;
+    }
+    .menu-lateral{
+        width: 80px;
+    }
+    .gambi{
+        display: flex;
+    }
+    .tentativa{
+        display: flex;
+        font-size: 30px;
+    }
+    .jesus{
+        display: none;
+    }
+    .amem{
+        display: flex;
+        color: rgba(248, 58, 58, 0.89);
+    }
+    .mobi{
+        display: none;
+    }
+    .principal{
+        width: 100%;
+    }
+    .flutuante{
+        left: 87%;
+        bottom: 2%;
+    }
+    header{
+    width: 100dvh;
+    border-radius: 0;
+    gap: 30px;
+    }
+    header.rolagem{
+        top: 0;
+    }
+    header ul{
+        margin: 8px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    header ul li{
+        margin: 6px;
+    }
+    header ul li a{
+        font-size: 30px;
+    }
+
+    .habili{
+        height: 150dvh;
+    }
+    .habili .titulo{
+        top: 0;
+        padding-bottom:20px ;
+    }
+    .espaco{
+        flex-direction: column;
+        height: 100dvh;
+    }
+    .img-chris{
+        width: 85%;
+        height: 93%;
+    }
+    .servico{
+        width: 100%;
+        height: 60dvh;
+        border-radius: 0;
+    }
+    .logos{
+        height: 40dvh;
+    }
+    .img-logo{
+        height: 30dvh;
+    }
+    .studi{
+        width: 100%;
+        height: 150dvh;
+        border-radius: 0;
+    }
+    .display{
+        padding: 0;
+    }
+    .video{
+        display:none;
+    }
+    .texto{
+        width: 100%;
+        border-radius: 0;
+    }
+    .entregas{
+        width: 100%;
+        border-radius: 0;
+        height: 100dvh;
+    }
+    .conteudo.show{
+        padding: 10px;
+        border-radius: 0;
+        height: 86%;
+    }
+    .tab-buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .projetos{
+        width: 100%;
+        height: 150vh;
+    }
+    .filtro{
+        width: 100%;
+        border-radius: 0;
+    }
+    .filtro ul{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .navegacao{
+        width: 100%;
+        height: 60dvh;
+        padding-left: 50px;
+    }
+    .span .tudo-proj img{
+        height: 70%;
+    }
+    .span .tudo-proj  i{
+        right: 5%;
+    }
+    footer{
+        height: 100dvh;
+    }
+    footer p{
+        font-size: 20px;
+     }
+     .tabela-disciplinas{
+        width: 100%;
+     }
+     .tabela-disciplinas th,
+     .tabela-disciplinas td {
+         font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+         padding: 4px; /* Ajuste o padding conforme necessário */
+     }
+}
+/*coloqui o whatssap no navbar, deixei ele invisivel para o computador, coloqui outro flutuante*/
+
+/* para funcionar no mobi eu diminui o tamanho da contencao do navbair */

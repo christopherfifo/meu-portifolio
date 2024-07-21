@@ -23,7 +23,6 @@ const menuSad = document.querySelector('.menu-lateral');
 btnExp.addEventListener('click', function () {
   menuSad.classList.toggle('expandir');
 });
-
 //! javascript do troca de tema
 
 
@@ -306,4 +305,15 @@ function formatString(value) {
     .normalize('NFD') // Normaliza para separar os acentos
     .replace(/[\u0300-\u036f]/g, ''); // Remove os acentos
 }
+
+const tent = document.querySelector('.contencao');
+const tenta = document.querySelector('.tentativa');
+
+tenta.addEventListener('click', () => {
+    if (tent.style.display === 'none') {
+        tent.style.display = 'flex';
+    } else {
+        tent.style.display = 'none';
+    }
+});
 
