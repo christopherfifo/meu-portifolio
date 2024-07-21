@@ -306,6 +306,10 @@ function formatString(value) {
     .replace(/[\u0300-\u036f]/g, ''); // Remove os acentos
 }
 
+
+//! javascript usado apenas no mobile
+
+
 const tent = document.querySelector('.contencao');
 const tenta = document.querySelector('.tentativa');
 
