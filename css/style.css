@@ -30,7 +30,7 @@ body {
     display: flex;
 }
 
-/******** inicio do sidebar *******/
+/****************************************************** saidbar *******************************************************************/
 
 .contencao {
     height: 100%;
@@ -122,12 +122,13 @@ nav.menu-lateral.expandir .txt-link {
     opacity: 1;
 }
 
-/***************/
 
 ul li.item-menu a .icon > i {
     font-size: 30px;
     margin-left: 20px;
 }
+
+/****************************************************** mudança de idioma *******************************************************************/
 
 .lingua {
     transform: scale(1.9);
@@ -181,6 +182,8 @@ ul li.item-menu a .icon > i {
     height: 20px;
 }
 
+/****************************************************** mudança de tema *******************************************************************/
+
 #mode_icon {
     cursor: pointer;
     position: absolute;
@@ -196,8 +199,10 @@ ul li.item-menu a .icon > i {
 .fa-moon {
     color: var(--lua);
 }
-
 /******** final do sidebar *******/
+
+/****************************************************** corpo do site *******************************************************************/
+
 .principal{
     width: calc(100% - 81px);
     height: 100%;
@@ -221,6 +226,8 @@ ul li.item-menu a .icon > i {
     color:  #25D366;
     cursor: pointer;
 }
+
+/****************************************************** cabeçalho *******************************************************************/
 
 article {
     width: 100%;
@@ -565,8 +572,9 @@ header ul li a {
         font-size: 50px;
     }
 }
-
 /**************************************** fim *********************************************************/
+
+/****************************************************** conteudos (ta na ordem)  *******************************************************************/
 
 .habili{
     background-color: var(--light_menu);
@@ -614,6 +622,8 @@ header ul li a {
    color: var(--light_menu);
 }
 
+/****************************************************** carrossel  *******************************************************************/
+
 .logos{
     width: 80%;
     height: 60vh;
@@ -645,6 +655,7 @@ header ul li a {
         transform: translateX(-45%);
     }
 }
+/********* fim do conteudo 1 **********/
 
 .studi {
     background-color: var(--light_menu);
@@ -674,8 +685,6 @@ header ul li a {
     padding: 0px 20px;
 }
 
-
-
 .texto {
     color: var(--light_menu);
     text-align: center;
@@ -695,7 +704,7 @@ iframe {
     height: 100%;
 }
 
-/* Estilo para a tabela de disciplinas */
+/************************************************** Estilo para a tabela de disciplinas ***************************************/
 .tabela-disciplinas {
     width: 90%;
     border-collapse: collapse;
@@ -723,7 +732,7 @@ iframe {
 .tabela-disciplinas th {
     background-color: #222;
 }
-
+/********************** fim do conteudo 2 ********************/
 
 
 /*************************************************** entregas ********************************************/
@@ -788,10 +797,10 @@ p.content-description, .content-title{
     text-align: center;
     margin-top: 20px;
 }
+/**************************fim das entregas (conteudo 3) *****************************/
 
+/******************************************** projetos ********************************************/
 
-
-/**************************fim das entregas *****************************/
 .projetos{
     width: 100%;
     height: 250vh;
@@ -963,7 +972,6 @@ p.content-description, .content-title{
     outline: none;
 }
 
-
 .navegacao{
     background-color: white;
     width: 1100px;
@@ -1060,6 +1068,7 @@ p.content-description, .content-title{
     align-items: center;
 }
 
+/****************************************************** span das informações *******************************************************************/
 
 .span {
 	top: 0;  
@@ -1139,6 +1148,7 @@ display: none;
  .info-proj{
     display: none;
 }
+/***************** fim dos projetos (conteudo 4)*****************/
 
 footer {
     display: flex;
@@ -1160,6 +1170,7 @@ footer h1{
     justify-content: center;
 }
 
+/****************************************************** animação do sol  *******************************************************************/
 
 .sun{
     background: linear-gradient(
@@ -1233,7 +1244,8 @@ footer h1{
     }
 }
 
-/********** modo dark ***********/
+/****************************************************** tema escuro *******************************************************************/
+
 body.dark{
     background-color: var(--dark_corpo);
 }
@@ -1364,6 +1376,8 @@ p.content-description.dark, .content-title.dark{
     color: var(--dark_texto);
 }
 
+/****************************************************** tags somente do celular *******************************************************************/
+
 .gambi{
     display:none;
 }
@@ -1399,13 +1413,13 @@ p.content-description.dark, .content-title.dark{
     .tentativa{
         display: flex;
         font-size: 17px;
+        padding-right: 14px;
     }
     .jesus{
         display: none;
     }
     .amem{
         display: flex;
-        color: rgba(248, 58, 58, 0.89);
     }
     .mobi{
         display: none;
@@ -1420,9 +1434,11 @@ p.content-description.dark, .content-title.dark{
     header{
     width: 100dvh;
     border-radius: 0;
+    gap: 5px;
     }
     header.rolagem{
         top: 0;
+        height: 85px;
     }
     header ul{
         margin: 8px;
@@ -1556,13 +1572,13 @@ p.content-description.dark, .content-title.dark{
     .tentativa{
         display: flex;
         font-size: 30px;
+        padding-right: 16px;
     }
     .jesus{
         display: none;
     }
     .amem{
         display: flex;
-        color: rgba(248, 58, 58, 0.89);
     }
     .mobi{
         display: none;
@@ -1581,6 +1597,7 @@ p.content-description.dark, .content-title.dark{
     }
     header.rolagem{
         top: 0;
+        height: 85px;
     }
     header ul{
         margin: 8px;
