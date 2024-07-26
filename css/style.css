@@ -1408,8 +1408,7 @@ p.content-description.dark, .content-title.dark{
     }
     nav.menu-lateral{
         width: 80px;
-        height: 100svh;
-        position: fixed;
+        height: 100dvh;
     }
     .gambi{
         display: flex;
@@ -1569,8 +1568,7 @@ p.content-description.dark, .content-title.dark{
     }
     nav.menu-lateral{
         width: 80px;
-        height: 100svh;
-        position: fixed;
+        height: 100dvh;
     }
     .gambi{
         display: flex;
