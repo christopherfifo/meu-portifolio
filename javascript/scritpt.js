@@ -83,15 +83,15 @@ window.addEventListener("scroll", function (){
 
 //! javascript slider
 
-let nextBtn = document.querySelector('.next')
+let nextBtn = document.querySelector('.next') //| pega o botão
 let prevBtn = document.querySelector('.prev')
 
-let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
-let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
+let slider = document.querySelector('.slider') //| pega a div que tem a thumb e as informações
+let sliderList = slider.querySelector('.slider .list') //| pega a parte das informações
+let thumbnail = document.querySelector('.slider .thumbnail') //| pega thumb
+let thumbnailItems = thumbnail.querySelectorAll('.item') //| pegas os itens da thumb
 
-thumbnail.appendChild(thumbnailItems[0])
+thumbnail.appendChild(thumbnailItems[0])//| coloca o primeiro item da thumbnail dentro da thumb
 
 // Function for next button 
 nextBtn.onclick = function() {
@@ -106,8 +106,8 @@ prevBtn.onclick = function() {
 
 
 function moveSlider(direction) {
-    let sliderItems = sliderList.querySelectorAll('.item')
-    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
+    let sliderItems = sliderList.querySelectorAll('.item')//| pega os intens da div informações
+    let thumbnailItems = document.querySelectorAll('.thumbnail .item')//| pega os itens da thumb
     
     if(direction === 'next'){
         sliderList.appendChild(sliderItems[0])
@@ -128,6 +128,12 @@ function moveSlider(direction) {
         }
     }, {once: true}) // Remove the event listener after it's triggered once
 }
+
+/*sliderList.prepend(sliderItems[sliderItems.length - 1]):
+sliderList parece ser um elemento HTML (provavelmente um <ul> ou <div> que contém itens de slider).
+sliderItems parece ser uma coleção de elementos que representam cada slide dentro do slider.
+sliderItems[sliderItems.length - 1] seleciona o último item da coleção sliderItems.
+.prepend() é um método que insere o elemento especificado como o primeiro filho do elemento sliderList. Portanto, esta linha insere o último slide como o primeiro filho de sliderList.*/
 
 //! javascript das abas
 
