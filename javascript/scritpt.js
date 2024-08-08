@@ -129,6 +129,12 @@ function moveSlider(direction) {
     }, {once: true}) // Remove the event listener after it's triggered once
 }
 
+//? move o slider automaticamente
+
+setInterval(function() {
+  moveSlider('next');
+}, 18000);
+
 /*sliderList.prepend(sliderItems[sliderItems.length - 1]):
 sliderList parece ser um elemento HTML (provavelmente um <ul> ou <div> que contém itens de slider).
 sliderItems parece ser uma coleção de elementos que representam cada slide dentro do slider.
